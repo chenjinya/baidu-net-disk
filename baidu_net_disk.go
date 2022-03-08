@@ -1,4 +1,4 @@
-package baidunetdisk
+package baidu_net_disk
 
 import (
 	"bytes"

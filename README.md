@@ -4,15 +4,15 @@
 ## Usage 
 
 ```go
-c := baidunetdisk.NewBaiduPanSpiderClient()
+c := baidu_net_disk.NewBaiduPanSpiderClient()
 var sections []interface
-_ = c.Walk(baiduPanPath, func(f *baidunetdisk.BaiduPanListFile) bool {
+_ = c.Walk(baiduPanPath, func(f *baidu_net_disk.BaiduPanListFile) bool {
     // 过滤视频类型
-    if f.Category != baidunetdisk.BaiduPanCategoryVideo {
+    if f.Category != baidu_net_disk.BaiduPanCategoryVideo {
         return false
     }
     return true
-}, func(metas []*baidunetdisk.BaiduPanFileMeta) error {
+}, func(metas []*baidu_net_disk.BaiduPanFileMeta) error {
     for _, v := range metas {
         println(v)
     }
